@@ -29,3 +29,24 @@ WHEN I click on an existing note in the list in the left-hand column
 THEN that note appears in the right-hand column and a "New Note" button appears in the navigation
 WHEN I click on the "New Note" button in the navigation at the top of the page
 THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column and the button disappears
+
+## Installation
+git clone https://github.com/your-username/NoteTaker.git
+cd NoteTaker
+npm install
+
+## Usage
+node server.js
+
+## Features
+Write, save, and delete notes.
+Notes are saved to a JSON file on the server.
+
+## API Routes
+GET /api/notes: Reads the db.json file and returns all saved notes as JSON.
+POST /api/notes: Receives a new note to save on the request body, adds it to the db.json file, and returns the new note to the client.
+DELETE /api/notes/:id: Deletes the note with the given id from the db.json file.
+
+## License
+This project is licensed under the MIT License.
+
